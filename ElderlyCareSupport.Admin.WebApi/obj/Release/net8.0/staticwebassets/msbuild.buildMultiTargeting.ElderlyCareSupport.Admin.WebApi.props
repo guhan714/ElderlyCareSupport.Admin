@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ElderlyCareSupport.Admin.WebApi.props" />
+</Project>

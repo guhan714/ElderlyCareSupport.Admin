@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>latestmajor</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ElderlyCareSupport.Admin.Contracts\ElderlyCareSupport.Admin.Contracts.csproj" />
+      <ProjectReference Include="..\ElderlyCareSupport.Admin.Domain\ElderlyCareSupport.Admin.Domain.csproj" />
+      <ProjectReference Include="..\ElderlyCareSupport.Admin.Logging\ElderlyCareSupport.Admin.Logging.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0-preview1" />
+      <PackageReference Include="IdentityModel" Version="7.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.1" />
+    </ItemGroup>
+
+</Project>

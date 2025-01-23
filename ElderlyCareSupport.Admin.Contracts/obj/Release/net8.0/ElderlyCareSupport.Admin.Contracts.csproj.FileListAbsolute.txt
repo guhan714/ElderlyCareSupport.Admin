@@ -1,0 +1,11 @@
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Contracts\bin\Release\net8.0\ElderlyCareSupport.Admin.Contracts.deps.json
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Contracts\bin\Release\net8.0\ElderlyCareSupport.Admin.Contracts.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Contracts\bin\Release\net8.0\ElderlyCareSupport.Admin.Contracts.pdb
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Contracts\obj\Release\net8.0\ElderlyCareSupport.Admin.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Contracts\obj\Release\net8.0\ElderlyCareSupport.Admin.Contracts.AssemblyInfoInputs.cache
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Contracts\obj\Release\net8.0\ElderlyCareSupport.Admin.Contracts.AssemblyInfo.cs
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Contracts\obj\Release\net8.0\ElderlyCareSupport.Admin.Contracts.csproj.CoreCompileInputs.cache
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Contracts\obj\Release\net8.0\ElderlyCareSupport.Admin.Contracts.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Contracts\obj\Release\net8.0\refint\ElderlyCareSupport.Admin.Contracts.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Contracts\obj\Release\net8.0\ElderlyCareSupport.Admin.Contracts.pdb
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Contracts\obj\Release\net8.0\ref\ElderlyCareSupport.Admin.Contracts.dll

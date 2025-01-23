@@ -1,0 +1,16 @@
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\bin\Debug\net8.0\ElderlyCareSupport.Admin.Logging.deps.json
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\bin\Debug\net8.0\ElderlyCareSupport.Admin.Logging.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\bin\Debug\net8.0\ElderlyCareSupport.Admin.Logging.pdb
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Debug\net8.0\ElderlyCareSupport.Admin.Logging.GeneratedMSBuildEditorConfig.editorconfig
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Debug\net8.0\ElderlyCareSupport.Admin.Logging.AssemblyInfoInputs.cache
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Debug\net8.0\ElderlyCareSupport.Admin.Logging.AssemblyInfo.cs
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Debug\net8.0\ElderlyCareSupport.Admin.Logging.csproj.CoreCompileInputs.cache
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Debug\net8.0\ElderlyCareSupport.Admin.Logging.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Debug\net8.0\refint\ElderlyCareSupport.Admin.Logging.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Debug\net8.0\ElderlyCareSupport.Admin.Logging.pdb
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Debug\net8.0\ref\ElderlyCareSupport.Admin.Logging.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Debug\net8.0\ElderlyCareSupport.Admin.Logging.csproj.AssemblyReference.cache
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Debug\net8.0\ElderlyC.579E5915.Up2Date
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll

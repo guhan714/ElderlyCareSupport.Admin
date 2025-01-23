@@ -1,0 +1,219 @@
+2025-01-23 09:39:36.164 +05:30 [ERR] Value cannot be null. (Parameter 's')
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at ElderlyCareSupport.Admin.WebApi.Configurations.AuthenticationConfiguration.<>c__DisplayClass0_0.<AddAuthenticationService>b__1(JwtBearerOptions options) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Configurations\Authentication.cs:line 23
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c.<Get>b__10_0(String name, IOptionsFactory`1 factory)
+   at Microsoft.Extensions.Options.OptionsCache`1.<>c__DisplayClass3_1`1.<GetOrAdd>b__2()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 09:41:38.840 +05:30 [ERR] Value cannot be null. (Parameter 's')
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at ElderlyCareSupport.Admin.WebApi.Configurations.AuthenticationConfiguration.<>c__DisplayClass0_0.<AddAuthenticationService>b__1(JwtBearerOptions options) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Configurations\Authentication.cs:line 23
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c.<Get>b__10_0(String name, IOptionsFactory`1 factory)
+   at Microsoft.Extensions.Options.OptionsCache`1.<>c__DisplayClass3_1`1.<GetOrAdd>b__2()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 09:42:47.446 +05:30 [ERR] Unable to resolve service for type 'ElderlyCareSupport.Admin.Application.IService.IKeycloakAdminService' while attempting to activate 'ElderlyCareSupport.Admin.WebApi.Controllers.AuthController'.
+System.InvalidOperationException: Unable to resolve service for type 'ElderlyCareSupport.Admin.Application.IService.IKeycloakAdminService' while attempting to activate 'ElderlyCareSupport.Admin.WebApi.Controllers.AuthController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean hasDefaultValue, Object key)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 09:44:35.595 +05:30 [ERR] Token Request Failed. Error: , Exception: 
+2025-01-23 10:34:49.764 +05:30 [ERR] Token Request Failed. Error: , Exception: 
+2025-01-23 11:14:24.444 +05:30 [ERR] Exception occurred. {Exception}.
+System.InvalidOperationException: Malformed URL
+   at IdentityModel.Client.DiscoveryEndpoint.ParseUrl(String input, String path)
+   at IdentityModel.Client.HttpClientDiscoveryExtensions.GetDiscoveryDocumentAsync(HttpMessageInvoker client, DiscoveryDocumentRequest request, CancellationToken cancellationToken)
+   at ElderlyCareSupport.Admin.Infrastructure.Services.TokenService.ConfigureToken(String username, String password) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Services\TokenService.cs:line 38
+2025-01-23 11:55:54.915 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-23 12:02:23.460 +05:30 [ERR] Token Request Failed. Error: , Exception: 
+2025-01-23 15:14:50.387 +05:30 [ERR] Exception occurred. {Exception}.
+System.ArgumentException: Parameter is required (Parameter 'username')
+   at IdentityModel.Client.Parameters.AddRequired(String key, String value, Boolean allowDuplicates, Boolean allowEmptyValue)
+   at IdentityModel.Client.HttpClientTokenRequestExtensions.RequestPasswordTokenAsync(HttpMessageInvoker client, PasswordTokenRequest request, CancellationToken cancellationToken)
+   at ElderlyCareSupport.Admin.Infrastructure.Services.TokenService.ConfigureToken(String username, String password) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Services\TokenService.cs:line 60
+2025-01-23 15:55:46.910 +05:30 [INF] GetUserByIdAsync process started
+2025-01-23 16:01:29.759 +05:30 [ERR] Token Request Failed. Error: , Exception: 
+2025-01-23 18:06:24.273 +05:30 [ERR] Invalid cast from 'DateTime' to 'Int32'.
+System.InvalidCastException: Invalid cast from 'DateTime' to 'Int32'.
+   at System.DateTime.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(DateTime value)
+   at ElderlyCareSupport.Admin.Infrastructure.Services.TokenProvider.CreateToken(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Services\TokenProvider.cs:line 38
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 21
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 18:11:03.501 +05:30 [ERR] IDX10634: Unable to create the SignatureProvider.
+Algorithm: 'RS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'
+ is not supported. The list of supported algorithms is available here: https://aka.ms/IdentityModel/supported-algorithms
+System.NotSupportedException: IDX10634: Unable to create the SignatureProvider.
+Algorithm: 'RS256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'
+ is not supported. The list of supported algorithms is available here: https://aka.ms/IdentityModel/supported-algorithms
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateSignature(ReadOnlySpan`1 data, Span`1 destination, SigningCredentials signingCredentials, Int32& bytesWritten)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor, Boolean setdefaultTimesOnTokenCreation, Int32 tokenLifetimeInMinutes)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   at ElderlyCareSupport.Admin.Infrastructure.Services.TokenProvider.CreateToken(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Services\TokenProvider.cs:line 35
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 21
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 18:12:06.301 +05:30 [ERR] IDX10634: Unable to create the SignatureProvider.
+Algorithm: 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'
+ is not supported. The list of supported algorithms is available here: https://aka.ms/IdentityModel/supported-algorithms
+System.NotSupportedException: IDX10634: Unable to create the SignatureProvider.
+Algorithm: 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'
+ is not supported. The list of supported algorithms is available here: https://aka.ms/IdentityModel/supported-algorithms
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateSignature(ReadOnlySpan`1 data, Span`1 destination, SigningCredentials signingCredentials, Int32& bytesWritten)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor, Boolean setdefaultTimesOnTokenCreation, Int32 tokenLifetimeInMinutes)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   at ElderlyCareSupport.Admin.Infrastructure.Services.TokenProvider.CreateToken(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Services\TokenProvider.cs:line 35
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 21
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 18:36:12.868 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/UserManagement/users" for actions - ElderlyCareSupport.Admin.WebApi.Controllers.UserManagementController.GetAllUsers (ElderlyCareSupport.Admin.WebApi),ElderlyCareSupport.Admin.WebApi.Controllers.UserManagementController.GetUserById (ElderlyCareSupport.Admin.WebApi). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-23 19:11:05.902 +05:30 [INF] GetUserByIdAsync process started
+2025-01-23 20:14:19.311 +05:30 [ERR] IDX10634: Unable to create the SignatureProvider.
+Algorithm: 'http://www.w3.org/2001/04/xmlenc#aes256-cbc', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'
+ is not supported. The list of supported algorithms is available here: https://aka.ms/IdentityModel/supported-algorithms
+System.NotSupportedException: IDX10634: Unable to create the SignatureProvider.
+Algorithm: 'http://www.w3.org/2001/04/xmlenc#aes256-cbc', SecurityKey: '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'
+ is not supported. The list of supported algorithms is available here: https://aka.ms/IdentityModel/supported-algorithms
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateSignature(ReadOnlySpan`1 data, Span`1 destination, SigningCredentials signingCredentials, Int32& bytesWritten)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor, Boolean setdefaultTimesOnTokenCreation, Int32 tokenLifetimeInMinutes)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   at ElderlyCareSupport.Admin.Infrastructure.Services.TokenProvider.CreateToken(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Services\TokenProvider.cs:line 36
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 21
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 20:16:31.007 +05:30 [ERR] IDX10666: Unable to create KeyedHashAlgorithm for algorithm 'A128KW'.
+System.NotSupportedException: IDX10666: Unable to create KeyedHashAlgorithm for algorithm 'A128KW'.
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(ReadOnlySpan`1 input, Span`1 signature, Int32& bytesWritten)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateSignature(ReadOnlySpan`1 data, Span`1 destination, SigningCredentials signingCredentials, Int32& bytesWritten)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor, Boolean setdefaultTimesOnTokenCreation, Int32 tokenLifetimeInMinutes)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.CreateToken(SecurityTokenDescriptor tokenDescriptor)
+   at ElderlyCareSupport.Admin.Infrastructure.Services.TokenProvider.CreateToken(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Services\TokenProvider.cs:line 36
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 21
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 20:24:30.589 +05:30 [INF] GetAllUsersAsync process started
+2025-01-23 20:30:10.592 +05:30 [INF] GetAllUsersAsync process started
+2025-01-23 20:35:02.288 +05:30 [INF] GetAllUsersAsync process started

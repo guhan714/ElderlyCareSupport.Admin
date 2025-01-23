@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ElderlyCareSuppport.Admin.Testing/1.0.0": {
+        "runtime": {
+          "ElderlyCareSuppport.Admin.Testing.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ElderlyCareSuppport.Admin.Testing/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

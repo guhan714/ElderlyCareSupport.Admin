@@ -1,0 +1,15 @@
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\obj\Release\net8.0\ElderlyCareSupport.Admin.SQL.GeneratedMSBuildEditorConfig.editorconfig
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\obj\Release\net8.0\ElderlyCareSupport.Admin.SQL.AssemblyInfoInputs.cache
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\obj\Release\net8.0\ElderlyCareSupport.Admin.SQL.AssemblyInfo.cs
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\obj\Release\net8.0\ElderlyCareSupport.Admin.SQL.csproj.CoreCompileInputs.cache
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\bin\Release\net8.0\ElderlyCareSupport.Admin.SQL.deps.json
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\bin\Release\net8.0\ElderlyCareSupport.Admin.SQL.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\bin\Release\net8.0\ElderlyCareSupport.Admin.SQL.pdb
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\obj\Release\net8.0\ElderlyCareSupport.Admin.SQL.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\obj\Release\net8.0\refint\ElderlyCareSupport.Admin.SQL.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\obj\Release\net8.0\ElderlyCareSupport.Admin.SQL.pdb
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\obj\Release\net8.0\ref\ElderlyCareSupport.Admin.SQL.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\bin\Release\net8.0\ElderlyCareSupport.Admin.Logging.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\bin\Release\net8.0\ElderlyCareSupport.Admin.Logging.pdb
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\obj\Release\net8.0\ElderlyCareSupport.Admin.SQL.csproj.AssemblyReference.cache
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.SQL\obj\Release\net8.0\ElderlyC.0EAF667A.Up2Date

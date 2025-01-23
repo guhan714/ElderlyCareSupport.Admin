@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "GjMFoYBcHplr4sSOxjNJZN1+zD+CjVAB1zYWMPCSYPU=",
+  "Source": "ElderlyCareSupport.Admin.WebApi",
+  "BasePath": "_content/ElderlyCareSupport.Admin.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
