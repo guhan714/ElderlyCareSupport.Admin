@@ -17,3 +17,4 @@ D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Applicat
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\obj\Release\net8.0\refint\ElderlyCareSupport.Admin.Application.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\obj\Release\net8.0\ElderlyCareSupport.Admin.Application.pdb
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\obj\Release\net8.0\ref\ElderlyCareSupport.Admin.Application.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\obj\Release\net8.0\ElderlyCareSupport.Admin.Application.sourcelink.json

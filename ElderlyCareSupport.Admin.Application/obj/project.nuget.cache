@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "qzZ9b/zpofk=",
+  "dgSpecHash": "LpCnphTG78I=",
   "success": true,
   "projectFilePath": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.Application\\ElderlyCareSupport.Admin.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\guhan\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\guhan\\.nuget\\packages\\fluentvalidation\\12.0.0-preview1\\fluentvalidation.12.0.0-preview1.nupkg.sha512",
     "C:\\Users\\guhan\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.0.0-preview1\\fluentvalidation.dependencyinjectionextensions.12.0.0-preview1.nupkg.sha512",
     "C:\\Users\\guhan\\.nuget\\packages\\identitymodel\\7.0.0\\identitymodel.7.0.0.nupkg.sha512",

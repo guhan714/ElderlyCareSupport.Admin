@@ -14,3 +14,4 @@ D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Release\net8.0\refint\ElderlyCareSupport.Admin.Logging.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Release\net8.0\ElderlyCareSupport.Admin.Logging.pdb
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Release\net8.0\ref\ElderlyCareSupport.Admin.Logging.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Release\net8.0\ElderlyCareSupport.Admin.Logging.sourcelink.json

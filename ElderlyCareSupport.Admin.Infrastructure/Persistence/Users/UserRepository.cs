@@ -37,9 +37,11 @@ public class UserRepository : IUserRepository
         throw new NotImplementedException();
     }
 
-    public async Task<User> UpdateUserAsync(string userId, User user)
+    public async Task<Tuple<User, bool>> UpdateUserAsync(User user)
     {
-        throw new NotImplementedException();
+        using var connection = _dbConnectionFactory.GetConnection();
+        var result = await connection.ExecuteScalarAsync<int>(UserQueries.UpdateUserById, new {user.Email});
+        return Tuple.Create(user, result >= 1);
     }
 
     public async Task<User> AddUserAsync(User user)

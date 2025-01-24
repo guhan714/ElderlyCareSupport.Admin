@@ -36,9 +36,11 @@ public class UserService : IUserService
         throw new NotImplementedException();
     }
 
-    public async Task<User> UpdateUserAsync(string userId, User user)
+    public async Task<Tuple<User, bool>> UpdateUserAsync(User user)
     {
-        throw new NotImplementedException();
+        _loggerFactory.LogInfo("UpdateUserAsync process started");
+        var userUpdateResult = await _userRepository.UpdateUserAsync(user);
+        return userUpdateResult;
     }
 
     public async Task<Tuple<User, bool>> DeleteUserAsync(string userId)

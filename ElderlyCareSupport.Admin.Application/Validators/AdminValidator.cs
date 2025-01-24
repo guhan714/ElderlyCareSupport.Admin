@@ -16,5 +16,8 @@ public sealed class AdminValidator : AbstractValidator<Contracts.Request.Admin>
             .NotNull().WithMessage("Password is required.")
             .MinimumLength(8).WithMessage("Password must be at least 8 characters.");
 
-       }
+        RuleFor(rule => rule.Role)
+            .NotEmpty().WithMessage("Role is required.");
+
+    }
 }

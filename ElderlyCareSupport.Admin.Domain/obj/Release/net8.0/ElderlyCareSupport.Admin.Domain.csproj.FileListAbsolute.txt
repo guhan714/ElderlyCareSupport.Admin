@@ -9,3 +9,4 @@ D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Domain\o
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Domain\obj\Release\net8.0\refint\ElderlyCareSupport.Admin.Domain.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Domain\obj\Release\net8.0\ElderlyCareSupport.Admin.Domain.pdb
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Domain\obj\Release\net8.0\ref\ElderlyCareSupport.Admin.Domain.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Domain\obj\Release\net8.0\ElderlyCareSupport.Admin.Domain.sourcelink.json

@@ -11,7 +11,7 @@ public interface IUserService
     
     Task<User> AddUserAsync(User user);
     
-    Task<User> UpdateUserAsync(string userId,User user);
+    Task<Tuple<User, bool>> UpdateUserAsync(User user);
     
     Task<Tuple<User, bool>> DeleteUserAsync(string userId);
 }

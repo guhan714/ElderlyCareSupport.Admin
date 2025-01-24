@@ -7,15 +7,14 @@ namespace ElderlyCareSupport.Admin.Application.Service;
 public class ResponseFactory : IResponseCreator
 {
     public ApiResponse<T> CreateResponse<T>(bool isSuccess, HttpStatusCode statusCode, T data,
-        IEnumerable<Error> errors) where T: class
-
+        IEnumerable<Error>? errors = null) where T: class
     {
         return new ApiResponse<T>
         (
             Success: isSuccess,
             StatusCode: statusCode,
             Data: data,
-            Errors: errors
+            Errors: errors ?? Enumerable.Empty<Error>()
         );
     }
 }

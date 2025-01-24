@@ -217,3 +217,139 @@ System.NotSupportedException: IDX10666: Unable to create KeyedHashAlgorithm for 
 2025-01-23 20:24:30.589 +05:30 [INF] GetAllUsersAsync process started
 2025-01-23 20:30:10.592 +05:30 [INF] GetAllUsersAsync process started
 2025-01-23 20:35:02.288 +05:30 [INF] GetAllUsersAsync process started
+2025-01-23 21:32:40.115 +05:30 [ERR] Value cannot be null. (Parameter 's')
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at BCrypt.Net.BCrypt.Verify(String text, String hash, Boolean enhancedEntropy, HashType hashType)
+   at ElderlyCareSupport.Admin.Application.Service.HashingService.VerifyPassword(String plainText, String passwordHash) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\HashingService.cs:line 9
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 28
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 21:35:03.665 +05:30 [ERR] Value cannot be null. (Parameter 's')
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at BCrypt.Net.BCrypt.Verify(String text, String hash, Boolean enhancedEntropy, HashType hashType)
+   at ElderlyCareSupport.Admin.Application.Service.HashingService.VerifyPassword(String plainText, String passwordHash) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\HashingService.cs:line 9
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 28
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 21:41:56.176 +05:30 [ERR] Value cannot be null. (Parameter 's')
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at BCrypt.Net.BCrypt.Verify(String text, String hash, Boolean enhancedEntropy, HashType hashType)
+   at ElderlyCareSupport.Admin.Application.Service.HashingService.VerifyPassword(String plainText, String passwordHash) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\HashingService.cs:line 9
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 28
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 21:47:41.317 +05:30 [ERR] Value cannot be null. (Parameter 's')
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at BCrypt.Net.BCrypt.Verify(String text, String hash, Boolean enhancedEntropy, HashType hashType)
+   at ElderlyCareSupport.Admin.Application.Service.HashingService.VerifyPassword(String plainText, String passwordHash) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\HashingService.cs:line 9
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 28
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 21:53:37.742 +05:30 [ERR] Value cannot be null. (Parameter 's')
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at BCrypt.Net.BCrypt.Verify(String text, String hash, Boolean enhancedEntropy, HashType hashType)
+   at ElderlyCareSupport.Admin.Application.Service.HashingService.VerifyPassword(String plainText, String passwordHash) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\HashingService.cs:line 9
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 28
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 22:04:06.980 +05:30 [ERR] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 28
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21
+2025-01-23 22:05:54.676 +05:30 [ERR] Value cannot be null. (Parameter 's')
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at BCrypt.Net.BCrypt.Verify(String text, String hash, Boolean enhancedEntropy, HashType hashType)
+   at ElderlyCareSupport.Admin.Application.Service.HashingService.VerifyPassword(String plainText, String passwordHash) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\HashingService.cs:line 9
+   at ElderlyCareSupport.Admin.Infrastructure.Persistence.Users.AuthenticationRepository.AuthenticateAdminAsync(Admin admin) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\Persistence\Users\AuthenticationRepository.cs:line 26
+   at ElderlyCareSupport.Admin.Application.Service.AdminAuthentication.AuthenticateAdminAsync(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\Service\AdminAuthentication.cs:line 18
+   at ElderlyCareSupport.Admin.WebApi.Controllers.AuthController.AuthenticateAdmin(Admin adminRequest) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Controllers\AuthController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at ElderlyCareSupport.Admin.WebApi.Middleware.GlobalErrorHandler.InvokeAsync(HttpContext context, RequestDelegate next) in D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\Middleware\GlobalErrorHandler.cs:line 21

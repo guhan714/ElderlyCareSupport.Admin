@@ -13,4 +13,16 @@ public static class UserQueries
                                                     SELECT FirstName, LastName, Email, Gender, PhoneNumber, Address, City, Country, Region, PostalCode, IsActive, USER FROM ElderCareAccount
                                                     WHERE Email = @Email
                                                   ";
+    
+    public static string UpdateUserById { get; } = @" UPDATE ElderCareAccount SET 
+                                                      FirstName = @FirstName,
+                                                      LastName = @LastName,
+                                                      PhoneNumber = @PhoneNumber,
+                                                      Gender = @Gender,
+                                                      Address = @Address,
+                                                      City = @City,
+                                                      Country = @Country,
+                                                      Region = @Region,
+                                                      PostalCode = @PostalCode
+                                                      WHERE Email = @Email;";
 }

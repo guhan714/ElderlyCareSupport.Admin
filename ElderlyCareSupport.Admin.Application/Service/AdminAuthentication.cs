@@ -16,6 +16,6 @@ public class AdminAuthentication : IKeycloakAdminService
     public async Task<Tuple<TokenResponse?, bool>> AuthenticateAdminAsync(Contracts.Request.Admin adminRequest)
     {
         var result = await _authenticationRepository.AuthenticateAdminAsync(adminRequest);
-        return Tuple.Create(result.Item1, result.Item2);
+        return result;
     }
 }

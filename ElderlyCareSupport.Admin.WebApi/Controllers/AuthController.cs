@@ -2,6 +2,8 @@
 using ElderlyCareSupport.Admin.Application.IService;
 using ElderlyCareSupport.Admin.Contracts.Response;
 using ElderlyCareSupport.Admin.Infrastructure.Services;
+using ElderlyCareSupport.Admin.WebApi.Abstractions;
+using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,50 +13,50 @@ namespace ElderlyCareSupport.Admin.WebApi.Controllers;
 [ApiController]
 [AllowAnonymous]
 [Produces("application/json")]
-public class AuthController : ControllerBase
+public class AuthController : BaseController
 {
-    private readonly IResponseCreator _responseCreator;
     private readonly IKeycloakAdminService _adminService;
     private readonly TokenProvider _tokenProvider;
     private readonly IConfiguration _configuration;
+    private readonly IValidator<Contracts.Request.Admin> _adminValidator;
 
-    public AuthController(IResponseCreator responseCreator, IKeycloakAdminService adminService,
-        TokenProvider tokenProvider, IConfiguration configuration)
+    public AuthController(IKeycloakAdminService adminService,
+        TokenProvider tokenProvider, IConfiguration configuration, IValidator<Contracts.Request.Admin> adminValidator)
     {
-        _responseCreator = responseCreator;
         _adminService = adminService;
         _tokenProvider = tokenProvider;
         _configuration = configuration;
+        _adminValidator = adminValidator;
     }
 
     [HttpPost("login")]
     public async Task<IActionResult> AuthenticateAdmin([FromBody] Contracts.Request.Admin adminRequest)
     {
+        var validateResult = await _adminValidator.ValidateAsync(adminRequest);
+        if (!validateResult.IsValid)
+        {
+            return HandleValidationErrors(validateResult);
+        }
         var authenticatedResponse = await _adminService.AuthenticateAdminAsync(adminRequest);
         if (!authenticatedResponse.Item2)
-            return Unauthorized(_responseCreator.CreateResponse(authenticatedResponse.Item2,
-                HttpStatusCode.Unauthorized, authenticatedResponse.Item1,
-                [new Error("NOT FOUND")]));
+            return ApiResponse(authenticatedResponse.Item2, HttpStatusCode.Unauthorized, authenticatedResponse.Item1, [new Error("User name or password is incorrect")]);
 
-        return Ok(_responseCreator.CreateResponse(
+        return ApiResponse(
             true,
             HttpStatusCode.OK,
-            authenticatedResponse,
-            Enumerable.Empty<Error>()));
+            authenticatedResponse);
     }
 
     [HttpPost("forgot-password")]
     public async Task<IActionResult> ForgotPasswordAction()
     {
-        return Ok(_responseCreator.CreateResponse(
+        return ApiResponse(
             true,
             HttpStatusCode.OK,
             // ReSharper disable once UseCollectionExpression
-            Enumerable.Empty<string>(),
-            // ReSharper disable once UseCollectionExpression
-            Enumerable.Empty<Error>()));
+            Enumerable.Empty<string>());
     }
-
+    
     [HttpPost("refresh-token")]
     public async Task<IActionResult> RefreshToken(TokenResponse tokenResponse)
     {
@@ -69,17 +71,16 @@ public class AuthController : ControllerBase
 
         if (string.IsNullOrEmpty(response.AccessToken))
         {
-            return NotFound(_responseCreator.CreateResponse(
+            return ApiResponse(
                 false,
                 HttpStatusCode.InternalServerError,
                 Enumerable.Empty<string>(),
-                [new Error("NOT FOUND")]));
+                [new Error("NOT FOUND")]);
         }
 
-        return Ok(_responseCreator.CreateResponse(
+        return ApiResponse(
             true,
             HttpStatusCode.OK,
-            response,
-            Enumerable.Empty<Error>()));
+            response);
     }
 }

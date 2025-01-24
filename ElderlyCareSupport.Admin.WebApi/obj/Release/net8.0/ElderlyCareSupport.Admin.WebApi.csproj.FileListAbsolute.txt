@@ -122,3 +122,5 @@ D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\b
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\IdentityModel.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\BCrypt.Net-Next.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\obj\Release\net8.0\ElderlyCareSupport.Admin.WebApi.sourcelink.json

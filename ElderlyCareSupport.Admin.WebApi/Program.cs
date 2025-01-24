@@ -4,10 +4,7 @@ using ElderlyCareSupport.Admin.Logging;
 using ElderlyCareSupport.Admin.WebApi.Configuration;
 using ElderlyCareSupport.Admin.WebApi.Middleware;
 
-
-
 var builder = WebApplication.CreateBuilder(args);
-
 
 builder.Services.AddAuthenticationConfiguration(builder.Configuration);
 builder.Services.AddAuthorization();

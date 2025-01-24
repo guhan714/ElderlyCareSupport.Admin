@@ -11,6 +11,7 @@ public static class DependencyInjection
     {
         
         services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
+        services.AddSingleton<IHashingService, HashingService>();
         services.AddScoped<IKeycloakAdminService, AdminAuthentication>();
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IResponseCreator>(provider => 

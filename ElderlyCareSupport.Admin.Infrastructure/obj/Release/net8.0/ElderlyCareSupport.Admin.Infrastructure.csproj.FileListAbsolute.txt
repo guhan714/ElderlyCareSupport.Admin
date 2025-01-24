@@ -21,3 +21,4 @@ D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastr
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\obj\Release\net8.0\ref\ElderlyCareSupport.Admin.Infrastructure.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Release\net8.0\ElderlyCareSupport.Admin.SQL.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Release\net8.0\ElderlyCareSupport.Admin.SQL.pdb
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\obj\Release\net8.0\ElderlyCareSupport.Admin.Infrastructure.sourcelink.json
