@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.webapi\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|solutionrelative:elderlycaresupport.admin.webapi\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|solutionrelative:elderlycaresupport.admin.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|solutionrelative:elderlycaresupport.admin.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,6 +55,43 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserManagementController.cs",
+              "DocumentMoniker": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Controllers\\UserManagementController.cs",
+              "RelativeDocumentMoniker": "ElderlyCareSupport.Admin.WebApi\\Controllers\\UserManagementController.cs",
+              "ToolTip": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Controllers\\UserManagementController.cs",
+              "RelativeToolTip": "ElderlyCareSupport.Admin.WebApi\\Controllers\\UserManagementController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwBEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T08:11:20.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ElderlyCareSupport.Admin.WebApi\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ElderlyCareSupport.Admin.WebApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T08:09:42.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "ElderlyCareSupport.Admin.WebApi\\Program.cs",
+              "ToolTip": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Program.cs",
+              "RelativeToolTip": "ElderlyCareSupport.Admin.WebApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T08:09:07.796Z"
             },
             {
               "$type": "Bookmark",

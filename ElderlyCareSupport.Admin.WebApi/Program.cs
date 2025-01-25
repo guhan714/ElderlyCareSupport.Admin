@@ -15,6 +15,7 @@ builder.Services
     .AddLoggingFactory(builder.Configuration);
 
 builder.Services.AddScoped<GlobalErrorHandler>();
+builder.Services.AddScoped<MacMiddleware>();
 builder.Services.AddHttpClient();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -33,7 +34,8 @@ app.UseAuthenticationConfiguration();
 app.UseAuthorization();
 
 app.UseHttpsRedirection();
-
+app.UseCors(o => o.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+app.UseMiddleware<MacMiddleware>();
 app.UseMiddleware<GlobalErrorHandler>();
 
 app.MapControllers();

@@ -17,7 +17,7 @@ public class UserManagementController : BaseController
     private readonly IUserService _userService;
     private readonly IValidator<string> _emailValidator;
     private readonly IValidator<User> _userValidator;
-
+    private string macAddress = Environment.GetEnvironmentVariable("MAC_ADDRESS")!;
     public UserManagementController(IUserService userService,
         IValidator<User> userValidator, IValidator<string> emailValidator)
     {
@@ -28,6 +28,7 @@ public class UserManagementController : BaseController
 
     [Authorize(Roles = "Admin")]
     [HttpGet("")]
+    [ValidateMacAddress]
     public async Task<IActionResult> GetAllUsers([FromQuery] UserQueryParameters userQueryParameters)
     {
         var users = await _userService.GetAllUsersAsync(userQueryParameters);
@@ -40,6 +41,7 @@ public class UserManagementController : BaseController
 
     [Authorize(Roles = "Admin")]
     [HttpGet("{userId}")]
+    [ValidateMacAddress]
     public async Task<IActionResult> GetUserById(string userId)
     {
         var isValidUserId = await _emailValidator.ValidateAsync(userId);
@@ -51,7 +53,8 @@ public class UserManagementController : BaseController
             return ApiResponse(
                 false,
                 HttpStatusCode.NotFound,
-                Enumerable.Empty<string>());
+                user,
+                [new Error("User not found")]);
 
 
         var response = ApiResponse(
@@ -63,6 +66,7 @@ public class UserManagementController : BaseController
 
     [Authorize(Roles = "Admin")]
     [HttpPost("update")]
+    [ValidateMacAddress]
     public async Task<IActionResult> UpdateUserByEmail([FromBody] User user)
     {
         var validationResult = await _userValidator.ValidateAsync(user);

@@ -11,8 +11,8 @@ namespace ElderlyCareSupport.Admin.WebApi.Controllers;
 
 [Route("auth")]
 [ApiController]
-[AllowAnonymous]
 [Produces("application/json")]
+[AllowAnonymous]
 public class AuthController : BaseController
 {
     private readonly IKeycloakAdminService _adminService;
