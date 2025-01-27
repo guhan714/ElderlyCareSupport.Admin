@@ -3,11 +3,12 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace ElderlyCareSupport.Admin.WebApi.Abstractions;
 
-public class ValidateMacAddressAttribute : ActionFilterAttribute
+[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Interface | AttributeTargets.Delegate)]
+public sealed class MacAddressFilterAttribute : ActionFilterAttribute
 {
     private readonly string _allowedMacAddress;
 
-    public ValidateMacAddressAttribute()
+    public MacAddressFilterAttribute()
     {
         _allowedMacAddress = Environment.GetEnvironmentVariable("MAC_ADDRESS")!;
     }

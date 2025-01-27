@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using Asp.Versioning;
 using ElderlyCareSupport.Admin.Application.IService;
 using ElderlyCareSupport.Admin.Contracts.Response;
 using ElderlyCareSupport.Admin.Domain.Models;
@@ -9,15 +10,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ElderlyCareSupport.Admin.WebApi.Controllers;
 
-[Route("api/[controller]/users")]
+[ApiVersion(1)]
 [ApiController]
 [Produces("application/json")]
+[Route("api/v{v:apiVersion}/[controller]/users")]
+
 public class UserManagementController : BaseController
 {
     private readonly IUserService _userService;
     private readonly IValidator<string> _emailValidator;
     private readonly IValidator<User> _userValidator;
-    private string macAddress = Environment.GetEnvironmentVariable("MAC_ADDRESS")!;
     public UserManagementController(IUserService userService,
         IValidator<User> userValidator, IValidator<string> emailValidator)
     {
@@ -28,7 +30,8 @@ public class UserManagementController : BaseController
 
     [Authorize(Roles = "Admin")]
     [HttpGet("")]
-    [ValidateMacAddress]
+    [ApiVersion(1)]
+    [MacAddressFilter]
     public async Task<IActionResult> GetAllUsers([FromQuery] UserQueryParameters userQueryParameters)
     {
         var users = await _userService.GetAllUsersAsync(userQueryParameters);
@@ -41,7 +44,8 @@ public class UserManagementController : BaseController
 
     [Authorize(Roles = "Admin")]
     [HttpGet("{userId}")]
-    [ValidateMacAddress]
+    [MapToApiVersion(1)]
+    [MacAddressFilter]
     public async Task<IActionResult> GetUserById(string userId)
     {
         var isValidUserId = await _emailValidator.ValidateAsync(userId);
@@ -56,7 +60,6 @@ public class UserManagementController : BaseController
                 user,
                 [new Error("User not found")]);
 
-
         var response = ApiResponse(
             true,
             statusCode:HttpStatusCode.OK,
@@ -66,7 +69,8 @@ public class UserManagementController : BaseController
 
     [Authorize(Roles = "Admin")]
     [HttpPost("update")]
-    [ValidateMacAddress]
+    [MapToApiVersion(1)]
+    [MacAddressFilter]
     public async Task<IActionResult> UpdateUserByEmail([FromBody] User user)
     {
         var validationResult = await _userValidator.ValidateAsync(user);

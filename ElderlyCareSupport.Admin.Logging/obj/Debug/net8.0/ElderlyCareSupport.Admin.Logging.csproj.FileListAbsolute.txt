@@ -14,3 +14,4 @@ D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Logging\obj\Debug\net8.0\ElderlyCareSupport.Admin.Logging.sourcelink.json

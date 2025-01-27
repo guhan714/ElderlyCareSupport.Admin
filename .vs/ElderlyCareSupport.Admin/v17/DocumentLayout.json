@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5258367A-3200-43C4-AD32-FC89F6488276}|ElderlyCareSupport.Admin.Infrastructure\\ElderlyCareSupport.Admin.Infrastructure.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.infrastructure\\models\\elderlycaresupportdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5258367A-3200-43C4-AD32-FC89F6488276}|ElderlyCareSupport.Admin.Infrastructure\\ElderlyCareSupport.Admin.Infrastructure.csproj|solutionrelative:elderlycaresupport.admin.infrastructure\\models\\elderlycaresupportdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|solutionrelative:elderlycaresupport.admin.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBAB1425-74D5-4DAC-942E-BB0B99BA6254}|ElderlyCareSupport.Admin.Application\\ElderlyCareSupport.Admin.Application.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.application\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBAB1425-74D5-4DAC-942E-BB0B99BA6254}|ElderlyCareSupport.Admin.Application\\ElderlyCareSupport.Admin.Application.csproj|solutionrelative:elderlycaresupport.admin.application\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.webapi\\configuration\\infrastructureconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|solutionrelative:elderlycaresupport.admin.webapi\\configuration\\infrastructureconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|solutionrelative:elderlycaresupport.admin.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.webapi\\middleware\\macmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|solutionrelative:elderlycaresupport.admin.webapi\\middleware\\macmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.webapi\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|solutionrelative:elderlycaresupport.admin.webapi\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|solutionrelative:elderlycaresupport.admin.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|d:\\elderlycaresupport\\elderlycaresupport.admin\\elderlycaresupport.admin.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EA2FE184-0A50-4B54-9256-F5DC86F60826}|ElderlyCareSupport.Admin.WebApi\\ElderlyCareSupport.Admin.WebApi.csproj|solutionrelative:elderlycaresupport.admin.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -53,25 +73,86 @@
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ElderlyCareSupportDbContext.cs",
+              "DocumentMoniker": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.Infrastructure\\Models\\ElderlyCareSupportDbContext.cs",
+              "RelativeDocumentMoniker": "ElderlyCareSupport.Admin.Infrastructure\\Models\\ElderlyCareSupportDbContext.cs",
+              "ToolTip": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.Infrastructure\\Models\\ElderlyCareSupportDbContext.cs",
+              "RelativeToolTip": "ElderlyCareSupport.Admin.Infrastructure\\Models\\ElderlyCareSupportDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T12:50:47.36Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "ElderlyCareSupport.Admin.WebApi\\appsettings.json",
+              "ToolTip": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\appsettings.json",
+              "RelativeToolTip": "ElderlyCareSupport.Admin.WebApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-26T12:22:38.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.Application\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "ElderlyCareSupport.Admin.Application\\Service\\UserService.cs",
+              "ToolTip": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.Application\\Service\\UserService.cs",
+              "RelativeToolTip": "ElderlyCareSupport.Admin.Application\\Service\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T07:18:21.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InfrastructureConfiguration.cs",
+              "DocumentMoniker": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Configuration\\InfrastructureConfiguration.cs",
+              "RelativeDocumentMoniker": "ElderlyCareSupport.Admin.WebApi\\Configuration\\InfrastructureConfiguration.cs",
+              "ToolTip": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Configuration\\InfrastructureConfiguration.cs",
+              "RelativeToolTip": "ElderlyCareSupport.Admin.WebApi\\Configuration\\InfrastructureConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T07:16:55.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MacMiddleware.cs",
+              "DocumentMoniker": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Middleware\\MacMiddleware.cs",
+              "RelativeDocumentMoniker": "ElderlyCareSupport.Admin.WebApi\\Middleware\\MacMiddleware.cs",
+              "ToolTip": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Middleware\\MacMiddleware.cs",
+              "RelativeToolTip": "ElderlyCareSupport.Admin.WebApi\\Middleware\\MacMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T05:24:25.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UserManagementController.cs",
               "DocumentMoniker": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Controllers\\UserManagementController.cs",
               "RelativeDocumentMoniker": "ElderlyCareSupport.Admin.WebApi\\Controllers\\UserManagementController.cs",
               "ToolTip": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Controllers\\UserManagementController.cs",
               "RelativeToolTip": "ElderlyCareSupport.Admin.WebApi\\Controllers\\UserManagementController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwBEAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwBEAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-24T08:11:20.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "ElderlyCareSupport.Admin.WebApi\\Controllers\\AuthController.cs",
@@ -79,11 +160,12 @@
               "RelativeToolTip": "ElderlyCareSupport.Admin.WebApi\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAQwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T08:09:42.955Z"
+              "WhenOpened": "2025-01-24T08:09:42.955Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\ElderlyCareSupport\\ElderlyCareSupport.Admin\\ElderlyCareSupport.Admin.WebApi\\Program.cs",
               "RelativeDocumentMoniker": "ElderlyCareSupport.Admin.WebApi\\Program.cs",
@@ -91,11 +173,8 @@
               "RelativeToolTip": "ElderlyCareSupport.Admin.WebApi\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T08:09:07.796Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{9a7cebbb-dc5c-4986-bc49-962da46aa506}"
+              "WhenOpened": "2025-01-24T08:09:07.796Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

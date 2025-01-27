@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using Asp.Versioning;
 using ElderlyCareSupport.Admin.Application.IService;
 using ElderlyCareSupport.Admin.Contracts.Response;
 using ElderlyCareSupport.Admin.Infrastructure.Services;
@@ -9,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ElderlyCareSupport.Admin.WebApi.Controllers;
 
-[Route("auth")]
+[ApiVersion(1)]
+[Route("v{v:apiVersion}/auth")]
 [ApiController]
 [Produces("application/json")]
 [AllowAnonymous]
@@ -21,7 +23,7 @@ public class AuthController : BaseController
     private readonly IValidator<Contracts.Request.Admin> _adminValidator;
 
     public AuthController(IKeycloakAdminService adminService,
-        TokenProvider tokenProvider, IConfiguration configuration, IValidator<Contracts.Request.Admin> adminValidator)
+        TokenProvider tokenProvider, IConfiguration configuration, IValidator<Contracts.Request.Admin> adminValidator) : base()
     {
         _adminService = adminService;
         _tokenProvider = tokenProvider;
@@ -29,6 +31,7 @@ public class AuthController : BaseController
         _adminValidator = adminValidator;
     }
 
+    [MapToApiVersion(1)]
     [HttpPost("login")]
     public async Task<IActionResult> AuthenticateAdmin([FromBody] Contracts.Request.Admin adminRequest)
     {
@@ -37,6 +40,7 @@ public class AuthController : BaseController
         {
             return HandleValidationErrors(validateResult);
         }
+        
         var authenticatedResponse = await _adminService.AuthenticateAdminAsync(adminRequest);
         if (!authenticatedResponse.Item2)
             return ApiResponse(authenticatedResponse.Item2, HttpStatusCode.Unauthorized, authenticatedResponse.Item1, [new Error("User name or password is incorrect")]);
@@ -47,6 +51,7 @@ public class AuthController : BaseController
             authenticatedResponse);
     }
 
+    [MapToApiVersion(1)]
     [HttpPost("forgot-password")]
     public async Task<IActionResult> ForgotPasswordAction()
     {
@@ -57,6 +62,7 @@ public class AuthController : BaseController
             Enumerable.Empty<string>());
     }
     
+    [MapToApiVersion(1)]
     [HttpPost("refresh-token")]
     public async Task<IActionResult> RefreshToken(TokenResponse tokenResponse)
     {

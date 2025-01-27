@@ -5,7 +5,7 @@ namespace ElderlyCareSupport.Admin.Application.IRepository;
 
 public interface IUserRepository
 {
-    Task<PagedResoonse<User>> GetAllUsersAsync(UserQueryParameters userQueryParameters);
+    Task<PagedResponse<User>> GetAllUsersAsync(UserQueryParameters userQueryParameters);
     
     Task<User?> GetUserByIdAsync(string userId);
     

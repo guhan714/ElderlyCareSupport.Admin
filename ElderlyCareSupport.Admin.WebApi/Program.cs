@@ -2,7 +2,6 @@ using ElderlyCareSupport.Admin.Application;
 using ElderlyCareSupport.Admin.Infrastructure;
 using ElderlyCareSupport.Admin.Logging;
 using ElderlyCareSupport.Admin.WebApi.Configuration;
-using ElderlyCareSupport.Admin.WebApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,13 +13,11 @@ builder.Services
     .AddInfrastructure(builder.Configuration)
     .AddLoggingFactory(builder.Configuration);
 
-builder.Services.AddScoped<GlobalErrorHandler>();
-builder.Services.AddScoped<MacMiddleware>();
-builder.Services.AddHttpClient();
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddInfraServiceCollection();
+builder.Services.AddVersioning();
 builder.Services.AddSwaggerConfiguration();
 
+builder.Services.AddHealthChecks();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -29,15 +26,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseNetworkConfig();
 app.UseAuthenticationConfiguration();
+app.UseInfra();
 app.UseAuthorization();
-
 app.UseHttpsRedirection();
-app.UseCors(o => o.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
-app.UseMiddleware<MacMiddleware>();
-app.UseMiddleware<GlobalErrorHandler>();
-
+app.UseCors(o => o.WithOrigins("http://localhost:4200","https://localhost:44374/")
+    .WithHeaders("Content-Type","Authorization","MAC-Address")
+    .AllowAnyMethod());
+app.UseHealthChecks(@"/health");
 app.MapControllers();
 
 await app.RunAsync();

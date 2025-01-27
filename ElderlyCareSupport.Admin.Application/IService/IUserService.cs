@@ -5,7 +5,7 @@ namespace ElderlyCareSupport.Admin.Application.IService;
 
 public interface IUserService
 {
-    Task<PagedResoonse<User>> GetAllUsersAsync(UserQueryParameters userQueryParameters);
+    Task<PagedResponse<User>> GetAllUsersAsync(UserQueryParameters userQueryParameters);
     
     Task<User> GetUserByIdAsync(string userId);
     

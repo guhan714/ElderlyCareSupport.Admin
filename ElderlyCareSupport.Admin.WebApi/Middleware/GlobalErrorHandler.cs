@@ -31,11 +31,17 @@ public class GlobalErrorHandler : IMiddleware
     {
         context.Response.ContentType = "application/json";
         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-        
+
         var error = new Error(exception.Message);
-        
-        var apiResponse = new ApiResponse<IEnumerable<string>>(Success: false, StatusCode: (HttpStatusCode)context.Response.StatusCode, Data: Enumerable.Empty<string>(), Errors: new List<Error>(){error});
-        
+
+        var apiResponse = new ApiResponse<IEnumerable<string>>
+        (
+            Success: false,
+            StatusCode: (HttpStatusCode)context.Response.StatusCode,
+            Data: Enumerable.Empty<string>(),
+            Errors: new List<Error>() { error }
+        );
+
         await context.Response.WriteAsync(JsonSerializer.Serialize(apiResponse));
     }
 }
