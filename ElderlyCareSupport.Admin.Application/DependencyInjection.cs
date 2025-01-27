@@ -14,8 +14,6 @@ public static class DependencyInjection
         services.AddSingleton<IHashingService, HashingService>();
         services.AddScoped<IKeycloakAdminService, AdminAuthentication>();
         services.AddScoped<IUserService, UserService>();
-        services.AddScoped<IResponseCreator>(provider => 
-            new ResponseFactory());
         
         return services;
     }

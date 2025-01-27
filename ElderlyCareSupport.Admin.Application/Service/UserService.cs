@@ -17,7 +17,7 @@ public class UserService : IUserService
         _loggerFactory = loggerFactory;
     }
 
-    public async Task<PagedResoonse<User>> GetAllUsersAsync(UserQueryParameters userQueryParameters)
+    public async Task<PagedResponse<User>> GetAllUsersAsync(UserQueryParameters userQueryParameters)
     {
         _loggerFactory.LogInfo("GetAllUsersAsync process started");
         var users = await _userRepository.GetAllUsersAsync(userQueryParameters);

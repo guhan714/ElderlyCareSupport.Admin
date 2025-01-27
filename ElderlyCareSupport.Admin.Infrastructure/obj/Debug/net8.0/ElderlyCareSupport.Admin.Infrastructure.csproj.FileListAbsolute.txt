@@ -13,11 +13,14 @@ D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastr
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\ElderlyCareSupport.Admin.Contracts.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\ElderlyCareSupport.Admin.Domain.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\ElderlyCareSupport.Admin.Logging.dll
-D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
-D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\ElderlyCareSupport.Admin.Application.pdb
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\ElderlyCareSupport.Admin.Contracts.pdb
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\ElderlyCareSupport.Admin.Domain.pdb
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\ElderlyCareSupport.Admin.Logging.pdb
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\obj\Debug\net8.0\ElderlyCareSupport.Admin.Infrastructure.csproj.AssemblyReference.cache
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\obj\Debug\net8.0\ElderlyC.E630883E.Up2Date
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\ElderlyCareSupport.Admin.SQL.dll
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\ElderlyCareSupport.Admin.SQL.pdb
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\obj\Debug\net8.0\ElderlyCareSupport.Admin.Infrastructure.sourcelink.json
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\bin\Debug\net8.0\ElderlyCareSupport.Admin.Infrastructure.runtimeconfig.json
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Infrastructure\obj\Debug\net8.0\ElderlyCareSupport.Admin.Infrastructure.genruntimeconfig.cache

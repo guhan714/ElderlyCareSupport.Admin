@@ -1,6 +1,4 @@
 ﻿using ElderlyCareSupport.Admin.Application.IRepository;
-using ElderlyCareSupport.Admin.Application.IService;
-using ElderlyCareSupport.Admin.Application.Service;
 using ElderlyCareSupport.Admin.Infrastructure.Persistence;
 using ElderlyCareSupport.Admin.Infrastructure.Persistence.RealTime;
 using ElderlyCareSupport.Admin.Infrastructure.Persistence.Users;
@@ -15,10 +13,9 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        
         var connectionString = configuration.GetConnectionString("ElderDB");
         services.AddSignalR();
-        services.AddScoped<TokenProvider>();
+        services.AddSingleton<TokenProvider>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IKeycloakAdminRepository, AuthenticationRepository>();
         services.AddScoped<IDbConnectionFactory>(provider => 

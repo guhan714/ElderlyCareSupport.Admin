@@ -16,13 +16,13 @@ public class UserRepository : IUserRepository
         _dbConnectionFactory = dbConnectionFactory;
     }
     
-    public async Task<PagedResoonse<User>> GetAllUsersAsync(UserQueryParameters userQueryParameters)
+    public async Task<PagedResponse<User>> GetAllUsersAsync(UserQueryParameters userQueryParameters)
     {
         using var connection = _dbConnectionFactory.GetConnection();
         var totalCount = await connection.ExecuteScalarAsync<int>("SELECT COUNT(*) FROM ElderCareAccount;");
         var userQuery = GetConfigurationForUserQuery(userQueryParameters);
         var users = await connection.QueryAsync<User>(userQuery.Item1, userQuery.Item2);
-        return new PagedResoonse<User>(users.ToList(), totalCount, userQueryParameters.pageNumber,  userQueryParameters.pageSize);
+        return new PagedResponse<User>(users.ToList(), totalCount, userQueryParameters.pageNumber,  userQueryParameters.pageSize);
     }
 
     public async Task<User?> GetUserByIdAsync(string userId)
@@ -49,7 +49,7 @@ public class UserRepository : IUserRepository
         throw new NotImplementedException();
     }
 
-    private Tuple<string, object> GetConfigurationForUserQuery(UserQueryParameters userQueryParameters)
+    private static Tuple<string, object> GetConfigurationForUserQuery(UserQueryParameters userQueryParameters)
     {
         var sanitizedSortBy = userQueryParameters.SortBy switch
         {

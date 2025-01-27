@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElderlyCareSupport.Admin.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2af3f48ba0bb38795b065bf2355cd8479e50d742")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c4e586cd661eb65ed05b8e84a7bcad6e487dadf")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElderlyCareSupport.Admin.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElderlyCareSupport.Admin.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

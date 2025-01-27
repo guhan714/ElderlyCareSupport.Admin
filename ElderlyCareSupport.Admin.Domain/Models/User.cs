@@ -1,9 +1,12 @@
-﻿namespace ElderlyCareSupport.Admin.Domain.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ElderlyCareSupport.Admin.Domain.Models;
 
 public class User
 {
     public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
+    [Key]
     public string Email { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
     public long PhoneNumber { get; set; } = long.MinValue;
@@ -13,6 +16,6 @@ public class User
     public string Country { get; set; } = string.Empty;
     public long PostalCode { get; set; } = long.MinValue;
     public string Region { get; set; } = string.Empty;
-    public UserType UserType { get; set; } 
+    public long UserType { get; set; } 
     public bool IsActive { get; set; } = true;
 };

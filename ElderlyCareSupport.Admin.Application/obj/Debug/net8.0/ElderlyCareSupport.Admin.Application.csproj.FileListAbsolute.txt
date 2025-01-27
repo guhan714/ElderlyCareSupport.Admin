@@ -17,3 +17,4 @@ D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Applicat
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\bin\Debug\net8.0\ElderlyCareSupport.Admin.Logging.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\bin\Debug\net8.0\ElderlyCareSupport.Admin.Domain.pdb
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\bin\Debug\net8.0\ElderlyCareSupport.Admin.Logging.pdb
+D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.Application\obj\Debug\net8.0\ElderlyCareSupport.Admin.Application.sourcelink.json
