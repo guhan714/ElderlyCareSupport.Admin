@@ -25,7 +25,7 @@ public abstract class BaseController : ControllerBase
     }
 
 
-    protected IActionResult HandleValidationErrors(ValidationResult validationResult)
+    protected IActionResult ErrorResponse(ValidationResult validationResult)
     {
         var response = new
         {

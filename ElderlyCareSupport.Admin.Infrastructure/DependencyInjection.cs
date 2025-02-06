@@ -18,6 +18,7 @@ public static class DependencyInjection
         services.AddSingleton<TokenProvider>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IKeycloakAdminRepository, AuthenticationRepository>();
+        services.AddScoped<ITaskRepository, TaskRepository>();
         services.AddScoped<IDbConnectionFactory>(provider => 
             new DbConnectionFactory(connectionString!));
         return services;

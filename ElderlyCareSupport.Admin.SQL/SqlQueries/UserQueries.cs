@@ -25,4 +25,11 @@ public static class UserQueries
                                                       Region = @Region,
                                                       PostalCode = @PostalCode
                                                       WHERE Email = @Email;";
+
+    public static string GetElderlyUsers { get; } = @"
+                                        SELECT * FROM ElderCareAccount WHERE UserType = 2";
+    
+    public static string GetVolunteers { get; } = @"SELECT * FROM ElderCareAccount WHERE UserType = 3";
+    
+    public static string DeleteUserById { get; } = @"DELETE FROM ElderCareAccount WHERE Email = @Email;";
 }

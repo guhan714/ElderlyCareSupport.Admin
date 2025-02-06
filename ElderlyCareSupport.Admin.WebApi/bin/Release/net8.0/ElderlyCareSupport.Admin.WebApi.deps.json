@@ -14,6 +14,7 @@
           "DotNetZip": "1.16.0",
           "ElderlyCareSupport.Admin.Application": "1.0.0",
           "ElderlyCareSupport.Admin.Infrastructure": "1.0.0",
+          "ElderlyCareSupport.Admin.Shared": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.12",
           "NWebsec.AspNetCore.Middleware": "3.0.0",
           "Swashbuckle.AspNetCore": "6.6.2"
@@ -1175,6 +1176,14 @@
           }
         }
       },
+      "ElderlyCareSupport.Admin.Shared/1.0.0": {
+        "runtime": {
+          "ElderlyCareSupport.Admin.Shared.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "ElderlyCareSupport.Admin.SQL/1.0.0": {
         "dependencies": {
           "ElderlyCareSupport.Admin.Logging": "1.0.0"
@@ -1964,6 +1973,11 @@
       "sha512": ""
     },
     "ElderlyCareSupport.Admin.Logging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ElderlyCareSupport.Admin.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,6 +1,6 @@
-﻿namespace ElderlyCareSupport.Admin.Contracts.Response;
+﻿namespace ElderlyCareSupport.Admin.Contracts.Request;
 
-public class UserQueryParameters
+public class PageQueryParameters
 {
     public string SearchTerm { get; set; } = string.Empty;
     public string SortBy { get; set; } = "UserType";

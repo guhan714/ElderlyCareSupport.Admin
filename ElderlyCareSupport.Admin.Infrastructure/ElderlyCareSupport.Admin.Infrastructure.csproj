@@ -29,4 +29,8 @@
       <ProjectReference Include="..\ElderlyCareSupport.Admin.SQL\ElderlyCareSupport.Admin.SQL.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Utilities\Email\" />
+    </ItemGroup>
+
 </Project>

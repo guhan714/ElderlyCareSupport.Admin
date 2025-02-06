@@ -1,5 +1,6 @@
 ﻿using ElderlyCareSupport.Admin.Application.IRepository;
 using ElderlyCareSupport.Admin.Application.IService;
+using ElderlyCareSupport.Admin.Contracts.Request;
 using ElderlyCareSupport.Admin.Contracts.Response;
 using ElderlyCareSupport.Admin.Domain.Models;
 using ElderlyCareSupport.Admin.Logging.ILogger;
@@ -17,7 +18,7 @@ public class UserService : IUserService
         _loggerFactory = loggerFactory;
     }
 
-    public async Task<PagedResponse<User>> GetAllUsersAsync(UserQueryParameters userQueryParameters)
+    public async Task<PagedResponse<User>> GetAllUsersAsync(PageQueryParameters? userQueryParameters)
     {
         _loggerFactory.LogInfo("GetAllUsersAsync process started");
         var users = await _userRepository.GetAllUsersAsync(userQueryParameters);
@@ -31,7 +32,7 @@ public class UserService : IUserService
         return user ?? new User();
     }
 
-    public async Task<User> AddUserAsync(User user)
+    public async Task<Tuple<User, bool>> AddUserAsync(User user)
     {
         throw new NotImplementedException();
     }
@@ -43,8 +44,9 @@ public class UserService : IUserService
         return userUpdateResult;
     }
 
-    public async Task<Tuple<User, bool>> DeleteUserAsync(string userId)
+    public async Task<Tuple<string, bool>> DeleteUserAsync(string userId)
     {
-        throw new NotImplementedException();
+        var result = await _userRepository.DeleteUserAsync(userId);
+        return result;
     }
 }
