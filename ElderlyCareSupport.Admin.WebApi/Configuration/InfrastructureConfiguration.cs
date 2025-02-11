@@ -1,4 +1,5 @@
 ﻿using System.IO.Compression;
+using ElderlyCareSupport.Admin.WebApi.Filters;
 using ElderlyCareSupport.Admin.WebApi.Middleware;
 using Microsoft.AspNetCore.ResponseCompression;
 
@@ -24,16 +25,16 @@ public static class InfrastructureConfiguration
         {
             option.Level = CompressionLevel.Optimal;
         });
-        
+        serviceCollection.AddScoped<MacFilterAttribute>();
         serviceCollection.AddScoped<GlobalErrorHandler>();
-        serviceCollection.AddScoped<MacMiddleware>();
+        serviceCollection.AddScoped<AuthorizationMiddleware>();
         return serviceCollection;
     }
 
     public static IApplicationBuilder UseInfra(this IApplicationBuilder app)
     {
         app.UseMiddleware<GlobalErrorHandler>();
-        app.UseMiddleware<MacMiddleware>();
+        app.UseMiddleware<AuthorizationMiddleware>();
         app.UseResponseCompression();
         return app;
     }

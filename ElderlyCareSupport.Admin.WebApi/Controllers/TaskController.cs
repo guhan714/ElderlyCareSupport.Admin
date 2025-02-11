@@ -15,7 +15,7 @@ namespace ElderlyCareSupport.Admin.WebApi.Controllers;
 [ApiVersion(1)]
 [Produces("application/json")]
 [Authorize(Roles = "Admin")]
-[MacAddressFilter]
+[MacFilter]
 public class TaskController : BaseController
 {
     private readonly ITaskService _service;
@@ -26,7 +26,7 @@ public class TaskController : BaseController
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAllTasks([FromBody] PageQueryParameters parameters)
+    public async Task<IActionResult> GetAllTasks([FromBody] PageQueryParameters? parameters)
     {
         var tasks = await _service.GetAllTasksAsync(parameters);
         return ApiResponse(true, HttpStatusCode.OK, tasks);
@@ -50,6 +50,7 @@ public class TaskController : BaseController
         if (!isTaskCancelled)
             return ApiResponse(isTaskCancelled, HttpStatusCode.Conflict, idTask,
                 [new Error("Task was not Cancelled")]);
+        
         return ApiResponse(isTaskCancelled, HttpStatusCode.NoContent, idTask);
     }
     

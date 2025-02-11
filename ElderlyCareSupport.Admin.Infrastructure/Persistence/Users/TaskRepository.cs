@@ -11,13 +11,13 @@ namespace ElderlyCareSupport.Admin.Infrastructure.Persistence.Users;
 public class TaskRepository : ITaskRepository
 {
     private readonly IDbConnectionFactory _connection;
- 
+
     public TaskRepository(IDbConnectionFactory connection)
     {
         _connection = connection;
     }
 
-    public async Task<PagedResponse<TaskDetails>> GetAllTaskDetails(PageQueryParameters taskQueryParameters)
+    public async Task<PagedResponse<TaskDetails>> GetAllTaskDetails(PageQueryParameters? taskQueryParameters)
     {
         var connectionSession = _connection.GetConnection();
         var total = await connectionSession.ExecuteScalarAsync<int>("SELECT COUNT(TaskId) FROM Task;");
@@ -30,7 +30,7 @@ public class TaskRepository : ITaskRepository
                     taskDetails.VolunteerAccount = volunteerDetails;
                     return taskDetails;
                 },
-                new { parameters }, splitOn: "VolunteerAccount");
+                parameters , splitOn: "VolunteerAccount");
 
         return new PagedResponse<TaskDetails>(result.ToList(), total, taskQueryParameters.pageNumber,
             taskQueryParameters.pageSize);
@@ -45,19 +45,19 @@ public class TaskRepository : ITaskRepository
     }
 
 
-    private static Tuple<string, object> ConfigureQuery(PageQueryParameters pageQueryParameters)
+    private static Tuple<string, object> ConfigureQuery(PageQueryParameters? pageQueryParameters)
     {
-        var orderField = pageQueryParameters.SortBy;
+        var orderField = pageQueryParameters?.SortBy;
         var orderBy = pageQueryParameters.Ascending ? "ASC" : "DESC";
         var offSet = pageQueryParameters.pageSize * (pageQueryParameters.pageNumber - 1);
         var taskQuery = string.Format(TaskQueries.GetAllTaskDetails, orderField, orderBy);
 
         var parameters = new
         {
-            @SearchTerm = pageQueryParameters.SearchTerm,
-            @offSet = offSet,
-            @PageSize = pageQueryParameters.pageSize,
-            @SearchValue = "Sample"
+            SearchTerm = pageQueryParameters.SearchTerm,
+            OffSet = offSet,
+            PageSize = pageQueryParameters.pageSize,
+            SearchValue = "Sample"
         };
 
         return Tuple.Create(taskQuery, parameters as object);
@@ -76,7 +76,7 @@ public class TaskRepository : ITaskRepository
             transaction.Rollback();
             return Tuple.Create(false, id);
         }
-        
+
         transaction.Commit();
         return Tuple.Create(true, id);
     }
