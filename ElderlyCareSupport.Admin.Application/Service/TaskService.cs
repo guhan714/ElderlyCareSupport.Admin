@@ -18,7 +18,7 @@ public class TaskService : ITaskService
         _taskRepository = taskRepository;
     }
 
-    public async Task<PagedResponse<TaskDetails>> GetAllTasksAsync(PageQueryParameters pageQueryParameters)
+    public async Task<PagedResponse<TaskDetails>> GetAllTasksAsync(PageQueryParameters? pageQueryParameters)
     {
         var taskResults = await _taskRepository.GetAllTaskDetails(pageQueryParameters);
         return taskResults;

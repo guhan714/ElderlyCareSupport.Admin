@@ -11,7 +11,7 @@ namespace ElderlyCareSupport.Admin.WebApi.Controllers;
 [Route("admin/v{v:apiVersion}/[controller]")]
 [Produces("application/json")]
 [Authorize(Roles = "Admin")]
-[MacAddressFilter]
+[MacFilter]
 public class PaymentsController : BaseController
 {
     

@@ -5,6 +5,7 @@ using ElderlyCareSupport.Admin.Contracts.Response;
 using ElderlyCareSupport.Admin.Infrastructure.Services;
 using ElderlyCareSupport.Admin.Shared.Messages;
 using ElderlyCareSupport.Admin.WebApi.Abstractions;
+using ElderlyCareSupport.Admin.WebApi.Filters;
 using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +17,7 @@ namespace ElderlyCareSupport.Admin.WebApi.Controllers;
 [ApiController]
 [Produces("application/json")]
 [AllowAnonymous]
+[MacFilter]
 public class AuthController : BaseController
 {
     private readonly IKeycloakAdminService _adminService;
@@ -24,7 +26,8 @@ public class AuthController : BaseController
     private readonly IValidator<Contracts.Request.Admin> _adminValidator;
 
     public AuthController(IKeycloakAdminService adminService,
-        TokenProvider tokenProvider, IConfiguration configuration, IValidator<Contracts.Request.Admin> adminValidator) : base()
+        TokenProvider tokenProvider, IConfiguration configuration,
+        IValidator<Contracts.Request.Admin> adminValidator) : base()
     {
         _adminService = adminService;
         _tokenProvider = tokenProvider;
@@ -41,13 +44,14 @@ public class AuthController : BaseController
         {
             return ErrorResponse(validateResult);
         }
-        
-        var (authenticatedResponse,success) = await _adminService.AuthenticateAdminAsync(adminRequest);
-        if (!success)
-            return ApiResponse(success, HttpStatusCode.Unauthorized, authenticatedResponse, [new Error(Messages.InvalidCredentials)]);
+
+        var (authenticatedResponse, isAuthenticated) = await _adminService.AuthenticateAdminAsync(adminRequest);
+        if (!isAuthenticated)
+            return ApiResponse(isAuthenticated, HttpStatusCode.Unauthorized, authenticatedResponse,
+                [new Error(Messages.InvalidCredentials)]);
 
         return ApiResponse(
-            success,
+            isAuthenticated,
             HttpStatusCode.OK,
             authenticatedResponse);
     }
@@ -59,10 +63,10 @@ public class AuthController : BaseController
         return ApiResponse(
             true,
             HttpStatusCode.OK,
-            // ReSharper disable once UseCollectionExpression
-            Enumerable.Empty<string>());
+            Enumerable.Empty<string>()
+        );
     }
-    
+
     [MapToApiVersion(1)]
     [HttpPost("refresh-token")]
     public async Task<IActionResult> RefreshToken(TokenResponse tokenResponse)

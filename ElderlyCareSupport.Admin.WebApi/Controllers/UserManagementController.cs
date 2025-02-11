@@ -18,6 +18,7 @@ namespace ElderlyCareSupport.Admin.WebApi.Controllers;
 [Produces("application/json")]
 [Route("api/v{v:apiVersion}/[controller]/users")]
 [Authorize(Roles = "Admin")]
+[MacFilter]
 public class UserManagementController : BaseController
 {
     private readonly IUserService _userService;
@@ -34,7 +35,6 @@ public class UserManagementController : BaseController
 
     [HttpGet("")]
     [ApiVersion(1)]
-    [MacAddressFilter]
     public async Task<IActionResult> GetAllUsers([FromQuery] PageQueryParameters userQueryParameters)
     {
         var users = await _userService.GetAllUsersAsync(userQueryParameters);
@@ -48,7 +48,6 @@ public class UserManagementController : BaseController
 
     [HttpGet("{userId}")]
     [MapToApiVersion(1)]
-    [MacAddressFilter]
     public async Task<IActionResult> GetUserById(string userId)
     {
         var isValidUserId = await _emailValidator.ValidateAsync(userId);
@@ -76,7 +75,6 @@ public class UserManagementController : BaseController
 
     [HttpPost("create")]
     [MapToApiVersion(1)]
-    [MacAddressFilter]
     public async Task<IActionResult> AddUser([FromBody] User user)
     {
         var validUser = await _userValidator.ValidateAsync(user);
@@ -93,7 +91,6 @@ public class UserManagementController : BaseController
 
     [HttpPut("update")]
     [MapToApiVersion(1)]
-    [MacAddressFilter]
     public async Task<IActionResult> UpdateUserByEmail([FromBody] User user)
     {
         var validationResult = await _userValidator.ValidateAsync(user);
@@ -118,7 +115,6 @@ public class UserManagementController : BaseController
 
     [HttpDelete("{userId}")]
     [MapToApiVersion(1)]
-    [MacAddressFilter]
     public async Task<IActionResult> DeleteUser(string userId)
     {
         var validationResult = await _emailValidator.ValidateAsync(userId);

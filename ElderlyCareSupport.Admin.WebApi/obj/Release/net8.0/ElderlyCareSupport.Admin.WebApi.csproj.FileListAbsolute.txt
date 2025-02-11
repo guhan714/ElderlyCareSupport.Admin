@@ -124,15 +124,6 @@ D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\b
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\BCrypt.Net-Next.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\obj\Release\net8.0\ElderlyCareSupport.Admin.WebApi.sourcelink.json
-D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\DotNetZip.dll
-D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\Microsoft.Win32.SystemEvents.dll
-D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\System.Drawing.Common.dll
-D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\System.Security.Permissions.dll
-D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\System.Windows.Extensions.dll
-D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\Asp.Versioning.Abstractions.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\Asp.Versioning.Http.dll
 D:\ElderlyCareSupport\ElderlyCareSupport.Admin\ElderlyCareSupport.Admin.WebApi\bin\Release\net8.0\Asp.Versioning.Mvc.dll
