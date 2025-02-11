@@ -3,6 +3,7 @@ using Asp.Versioning;
 using ElderlyCareSupport.Admin.Application.IService;
 using ElderlyCareSupport.Admin.Contracts.Response;
 using ElderlyCareSupport.Admin.Infrastructure.Services;
+using ElderlyCareSupport.Admin.Shared.Messages;
 using ElderlyCareSupport.Admin.WebApi.Abstractions;
 using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
@@ -38,15 +39,15 @@ public class AuthController : BaseController
         var validateResult = await _adminValidator.ValidateAsync(adminRequest);
         if (!validateResult.IsValid)
         {
-            return HandleValidationErrors(validateResult);
+            return ErrorResponse(validateResult);
         }
         
-        var authenticatedResponse = await _adminService.AuthenticateAdminAsync(adminRequest);
-        if (!authenticatedResponse.Item2)
-            return ApiResponse(authenticatedResponse.Item2, HttpStatusCode.Unauthorized, authenticatedResponse.Item1, [new Error("User name or password is incorrect")]);
+        var (authenticatedResponse,success) = await _adminService.AuthenticateAdminAsync(adminRequest);
+        if (!success)
+            return ApiResponse(success, HttpStatusCode.Unauthorized, authenticatedResponse, [new Error(Messages.InvalidCredentials)]);
 
         return ApiResponse(
-            true,
+            success,
             HttpStatusCode.OK,
             authenticatedResponse);
     }
@@ -77,11 +78,12 @@ public class AuthController : BaseController
 
         if (string.IsNullOrEmpty(response.AccessToken))
         {
+            var error = new Error("NOT FOUND");
             return ApiResponse(
                 false,
                 HttpStatusCode.InternalServerError,
                 Enumerable.Empty<string>(),
-                [new Error("NOT FOUND")]);
+                [error]);
         }
 
         return ApiResponse(

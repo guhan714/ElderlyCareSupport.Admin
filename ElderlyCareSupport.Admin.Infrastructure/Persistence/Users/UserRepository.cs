@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using ElderlyCareSupport.Admin.Application.IRepository;
+using ElderlyCareSupport.Admin.Contracts.Request;
 using ElderlyCareSupport.Admin.Contracts.Response;
 using ElderlyCareSupport.Admin.Domain.Models;
 using ElderlyCareSupport.Admin.SQL.SqlQueries;
@@ -16,7 +17,7 @@ public class UserRepository : IUserRepository
         _dbConnectionFactory = dbConnectionFactory;
     }
     
-    public async Task<PagedResponse<User>> GetAllUsersAsync(UserQueryParameters userQueryParameters)
+    public async Task<PagedResponse<User>> GetAllUsersAsync(PageQueryParameters userQueryParameters)
     {
         using var connection = _dbConnectionFactory.GetConnection();
         var totalCount = await connection.ExecuteScalarAsync<int>("SELECT COUNT(*) FROM ElderCareAccount;");
@@ -32,9 +33,11 @@ public class UserRepository : IUserRepository
         return userDetails;
     }
 
-    public async Task<Tuple<User, bool>> DeleteUserAsync(string userId)
+    public async Task<Tuple<string, bool>> DeleteUserAsync(string userId)
     {
-        throw new NotImplementedException();
+        using var connection = _dbConnectionFactory.GetConnection();
+        var result = await connection.ExecuteScalarAsync<int>(UserQueries.DeleteUserById, new { Email = userId });
+        return Tuple.Create(userId, result > 0);
     }
 
     public async Task<Tuple<User, bool>> UpdateUserAsync(User user)
@@ -49,7 +52,7 @@ public class UserRepository : IUserRepository
         throw new NotImplementedException();
     }
 
-    private static Tuple<string, object> GetConfigurationForUserQuery(UserQueryParameters userQueryParameters)
+    private static Tuple<string, object> GetConfigurationForUserQuery(PageQueryParameters userQueryParameters)
     {
         var sanitizedSortBy = userQueryParameters.SortBy switch
         {
@@ -59,7 +62,7 @@ public class UserRepository : IUserRepository
             _ => "FirstName" 
         };
         var sortOrder = userQueryParameters.Ascending ? "ASC" : "DESC";
-        var offSet = userQueryParameters.pageNumber * (userQueryParameters.pageNumber - 1);
+        var offSet = userQueryParameters.pageSize * (userQueryParameters.pageNumber - 1);
         var query = string.Format(UserQueries.GetAllUsersWithPaging, sanitizedSortBy, sortOrder);
         var parameters = new  { Search = userQueryParameters.SearchTerm, offSet = offSet, pageSize = userQueryParameters.pageSize };
         

@@ -1,11 +1,12 @@
-﻿using ElderlyCareSupport.Admin.Contracts.Response;
+﻿using ElderlyCareSupport.Admin.Contracts.Request;
+using ElderlyCareSupport.Admin.Contracts.Response;
 using ElderlyCareSupport.Admin.Domain.Models;
 
 namespace ElderlyCareSupport.Admin.Application.IRepository;
 
 public interface IUserRepository
 {
-    Task<PagedResponse<User>> GetAllUsersAsync(UserQueryParameters userQueryParameters);
+    Task<PagedResponse<User>> GetAllUsersAsync(PageQueryParameters? userQueryParameters);
     
     Task<User?> GetUserByIdAsync(string userId);
     
@@ -13,5 +14,5 @@ public interface IUserRepository
     
     Task<Tuple<User, bool>> UpdateUserAsync(User user);
     
-    Task<Tuple<User, bool>> DeleteUserAsync(string userId);
+    Task<Tuple<string, bool>> DeleteUserAsync(string userId);
 }

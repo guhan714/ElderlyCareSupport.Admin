@@ -14,5 +14,8 @@ internal sealed class UserHub : Hub<IUserUpdateHandler>
         await base.OnDisconnectedAsync(exception);
     }
 
-    
+    public async Task UpdateUser(string userId)
+    {
+        await Groups.AddToGroupAsync(Context.ConnectionId, userId);
+    }
 }

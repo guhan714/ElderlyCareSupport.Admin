@@ -14,7 +14,7 @@ public static class DependencyInjection
         services.AddSingleton<IHashingService, HashingService>();
         services.AddScoped<IKeycloakAdminService, AdminAuthentication>();
         services.AddScoped<IUserService, UserService>();
-        
+        services.AddScoped<ITaskService, TaskService>();
         return services;
     }
 }
