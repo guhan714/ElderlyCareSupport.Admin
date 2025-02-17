@@ -11,10 +11,9 @@ builder.Services.AddAuthorization();
 builder.Services
     .AddApplication()
     .AddInfrastructure(builder.Configuration)
-    .AddLoggingFactory(builder.Configuration);
-
-builder.Services.AddInfraServiceCollection();
-builder.Services.AddVersioning();
+    .AddLoggingFactory(builder.Configuration)
+    .AddInfraServiceCollection()
+    .AddVersioning();
 builder.Services.AddSwaggerConfiguration();
 
 builder.Services.AddHealthChecks();

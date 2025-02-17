@@ -1,6 +1,8 @@
 ﻿using System.IO.Compression;
+using System.Threading.RateLimiting;
 using ElderlyCareSupport.Admin.WebApi.Filters;
 using ElderlyCareSupport.Admin.WebApi.Middleware;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.AspNetCore.ResponseCompression;
 
 namespace ElderlyCareSupport.Admin.WebApi.Configuration;
@@ -25,6 +27,20 @@ public static class InfrastructureConfiguration
         {
             option.Level = CompressionLevel.Optimal;
         });
+
+        serviceCollection.AddRateLimiter(options =>
+        {
+            options.AddFixedWindowLimiter("Fixed", opt =>
+            {
+                opt.Window = TimeSpan.FromMinutes(5);
+                opt.PermitLimit = 100;
+                opt.QueueLimit = 2;
+                opt.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+            });
+        });
+
+        serviceCollection.AddHealthChecks();
+        
         serviceCollection.AddScoped<MacFilterAttribute>();
         serviceCollection.AddScoped<GlobalErrorHandler>();
         serviceCollection.AddScoped<AuthorizationMiddleware>();
@@ -35,6 +51,8 @@ public static class InfrastructureConfiguration
     {
         app.UseMiddleware<GlobalErrorHandler>();
         app.UseMiddleware<AuthorizationMiddleware>();
+        app.UseRateLimiter();
+        app.UseHealthChecks(new PathString("/health"));
         app.UseResponseCompression();
         return app;
     }

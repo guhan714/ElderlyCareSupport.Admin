@@ -27,7 +27,7 @@ public class AuthController : BaseController
 
     public AuthController(IKeycloakAdminService adminService,
         TokenProvider tokenProvider, IConfiguration configuration,
-        IValidator<Contracts.Request.Admin> adminValidator) : base()
+        IValidator<Contracts.Request.Admin> adminValidator) 
     {
         _adminService = adminService;
         _tokenProvider = tokenProvider;
@@ -42,16 +42,15 @@ public class AuthController : BaseController
         var validateResult = await _adminValidator.ValidateAsync(adminRequest);
         if (!validateResult.IsValid)
         {
-            return ErrorResponse(validateResult);
+            return ValidationErrorResult(validateResult);
         }
 
         var (authenticatedResponse, isAuthenticated) = await _adminService.AuthenticateAdminAsync(adminRequest);
         if (!isAuthenticated)
-            return ApiResponse(isAuthenticated, HttpStatusCode.Unauthorized, authenticatedResponse,
+            return FailureResult(HttpStatusCode.Unauthorized,
                 [new Error(Messages.InvalidCredentials)]);
 
-        return ApiResponse(
-            isAuthenticated,
+        return SuccessResult(
             HttpStatusCode.OK,
             authenticatedResponse);
     }
@@ -60,8 +59,7 @@ public class AuthController : BaseController
     [HttpPost("forgot-password")]
     public async Task<IActionResult> ForgotPasswordAction()
     {
-        return ApiResponse(
-            true,
+        return SuccessResult(
             HttpStatusCode.OK,
             Enumerable.Empty<string>()
         );
@@ -83,15 +81,12 @@ public class AuthController : BaseController
         if (string.IsNullOrEmpty(response.AccessToken))
         {
             var error = new Error("NOT FOUND");
-            return ApiResponse(
-                false,
+            return FailureResult(
                 HttpStatusCode.InternalServerError,
-                Enumerable.Empty<string>(),
                 [error]);
         }
 
-        return ApiResponse(
-            true,
+        return SuccessResult(
             HttpStatusCode.OK,
             response);
     }

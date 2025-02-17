@@ -34,6 +34,7 @@ public class UserService : IUserService
 
     public async Task<Tuple<User, bool>> AddUserAsync(User user)
     {
+        await Task.Run(async () => await _userRepository.AddUserAsync(user));
         throw new NotImplementedException();
     }
 

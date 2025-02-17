@@ -7,25 +7,34 @@ namespace ElderlyCareSupport.Admin.WebApi.Abstractions;
 
 public abstract class BaseController : ControllerBase
 {
-    protected IActionResult ApiResponse<T>(
-        bool success,
+    protected static IActionResult SuccessResult<T>(
         HttpStatusCode statusCode,
-        T data,
-        IEnumerable<Error>? errors = null)
+        T data)
     {
         var response =  new
         {
-            Success = success,
+            Success = true,
             StatusCode = statusCode,
             Data = data,
-            Errors = errors ?? Enumerable.Empty<Error>()
+            Errors = Enumerable.Empty<Error>()
         };
         
         return new ObjectResult(response) {StatusCode = (int)statusCode};
     }
 
+    protected static IActionResult FailureResult(HttpStatusCode statusCode, List<Error> errors)
+    {
+        var response =  new
+        {
+            Success = false,
+            StatusCode = statusCode,
+            Data = Enumerable.Empty<string>(),
+            Errors = errors
+        };
+        return new ObjectResult(response) {StatusCode = (int)statusCode};
+    }
 
-    protected IActionResult ErrorResponse(ValidationResult validationResult)
+    protected static IActionResult ValidationErrorResult(ValidationResult validationResult)
     {
         var response = new
         {
