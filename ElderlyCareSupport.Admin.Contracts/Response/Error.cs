@@ -1,6 +1,6 @@
 ﻿namespace ElderlyCareSupport.Admin.Contracts.Response;
 
-public class Error
+public record Error
 {
     public Error(string errorMessage)
     {

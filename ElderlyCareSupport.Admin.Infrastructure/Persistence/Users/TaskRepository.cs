@@ -29,10 +29,10 @@ public class TaskRepository : ITaskRepository
                 {
                     taskDetails.VolunteerAccount = volunteerDetails;
                     return taskDetails;
-                },
-                parameters , splitOn: "VolunteerAccount");
+                }, 
+                param: parameters , splitOn: "Id");
 
-        return new PagedResponse<TaskDetails>(result.ToList(), total, taskQueryParameters.pageNumber,
+        return new PagedResponse<TaskDetails>(result.ToList(), total, taskQueryParameters!.pageNumber,
             taskQueryParameters.pageSize);
     }
 
@@ -47,17 +47,21 @@ public class TaskRepository : ITaskRepository
 
     private static Tuple<string, object> ConfigureQuery(PageQueryParameters? pageQueryParameters)
     {
-        var orderField = pageQueryParameters?.SortBy;
+        var sanitizedSortBy = pageQueryParameters?.SortBy switch
+        {
+            "TaskId" => "TaskId",
+            "TaskStatusId" => "TaskStatusId",
+            _ => "TaskStatusId" 
+        };
         var orderBy = pageQueryParameters.Ascending ? "ASC" : "DESC";
         var offSet = pageQueryParameters.pageSize * (pageQueryParameters.pageNumber - 1);
-        var taskQuery = string.Format(TaskQueries.GetAllTaskDetails, orderField, orderBy);
+        var taskQuery = string.Format(TaskQueries.GetAllTaskDetails, sanitizedSortBy, orderBy);
 
         var parameters = new
         {
             SearchTerm = pageQueryParameters.SearchTerm,
             OffSet = offSet,
-            PageSize = pageQueryParameters.pageSize,
-            SearchValue = "Sample"
+            PageSize = pageQueryParameters.pageSize
         };
 
         return Tuple.Create(taskQuery, parameters as object);

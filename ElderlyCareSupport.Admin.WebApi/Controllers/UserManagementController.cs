@@ -10,6 +10,7 @@ using ElderlyCareSupport.Admin.WebApi.Filters;
 using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace ElderlyCareSupport.Admin.WebApi.Controllers;
 
@@ -24,7 +25,7 @@ public class UserManagementController : BaseController
     private readonly IUserService _userService;
     private readonly IValidator<string> _emailValidator;
     private readonly IValidator<User> _userValidator;
-
+    
     public UserManagementController(IUserService userService,
         IValidator<User> userValidator, IValidator<string> emailValidator)
     {
@@ -33,13 +34,13 @@ public class UserManagementController : BaseController
         _emailValidator = emailValidator;
     }
 
+    [EnableRateLimiting("Fixed")]
     [HttpGet("")]
     [ApiVersion(1)]
     public async Task<IActionResult> GetAllUsers([FromQuery] PageQueryParameters userQueryParameters)
     {
         var users = await _userService.GetAllUsersAsync(userQueryParameters);
-        var response = ApiResponse(
-            true,
+        var response = SuccessResult(
             HttpStatusCode.OK,
             users);
         return response;
@@ -52,21 +53,18 @@ public class UserManagementController : BaseController
     {
         var isValidUserId = await _emailValidator.ValidateAsync(userId);
         if (!isValidUserId.IsValid)
-            return ErrorResponse(isValidUserId);
+            return ValidationErrorResult(isValidUserId);
 
         var user = await _userService.GetUserByIdAsync(userId);
         if (string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.FirstName))
         {
-            return ApiResponse(
-                false,
+            return FailureResult(
                 HttpStatusCode.NotFound,
-                user,
                 [new Error(Messages.UserNotFound)]);
         }
 
 
-        var response = ApiResponse(
-            true,
+        var response = SuccessResult(
             statusCode: HttpStatusCode.OK,
             data: user);
         return response;
@@ -79,13 +77,13 @@ public class UserManagementController : BaseController
     {
         var validUser = await _userValidator.ValidateAsync(user);
         if (!validUser.IsValid)
-            return ErrorResponse(validUser);
+            return ValidationErrorResult(validUser);
 
         var (data, success) = await _userService.AddUserAsync(user);
         if (!success)
-            return ApiResponse(success, HttpStatusCode.InternalServerError, data, [new Error(Messages.InternalServerError)]);
+            return FailureResult( HttpStatusCode.InternalServerError, [new Error(Messages.InternalServerError)]);
 
-        return ApiResponse(success, HttpStatusCode.Created, data);
+        return SuccessResult(HttpStatusCode.Created, data);
     }
 
 
@@ -96,18 +94,17 @@ public class UserManagementController : BaseController
         var validationResult = await _userValidator.ValidateAsync(user);
         if (!validationResult.IsValid)
         {
-            return ErrorResponse(validationResult);
+            return ValidationErrorResult(validationResult);
         }
 
         var (data, success) = await _userService.UpdateUserAsync(user);
         if (!success)
         {
-            return ApiResponse(success, HttpStatusCode.InternalServerError,
-                data, [new Error(Messages.InternalServerError)]);
+            return FailureResult(HttpStatusCode.InternalServerError,
+                 [new Error(Messages.InternalServerError)]);
         }
 
-        return ApiResponse(
-            success,
+        return SuccessResult(
             HttpStatusCode.NoContent,
             data);
     }
@@ -119,14 +116,14 @@ public class UserManagementController : BaseController
     {
         var validationResult = await _emailValidator.ValidateAsync(userId);
         if (!validationResult.IsValid)
-            return ErrorResponse(validationResult);
+            return ValidationErrorResult(validationResult);
 
         var (data, success) = await _userService.DeleteUserAsync(userId);
         if (!success)
         {
-            return ApiResponse(false, HttpStatusCode.Conflict, data, [new Error(Messages.InternalServerError)]);
+            return FailureResult(HttpStatusCode.Conflict, [new Error(Messages.InternalServerError)]);
         }
 
-        return ApiResponse(success, HttpStatusCode.OK, data);
+        return SuccessResult(HttpStatusCode.OK, data);
     }
 }
